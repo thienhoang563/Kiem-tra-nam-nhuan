@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   var year = parseInt(prompt("Nhập vào năm"))
+
+   var lanamnhuan = false;
+
+   var isInvisibleBy4 = year % 4 ==0;
+
+   if (isInvisibleBy4){
+       var isInvisibleBy100 = year % 100 ==0;
+       if (isInvisibleBy100){
+           var isInvisibleBy400 = year % 400 ==0;
+           if (isInvisibleBy400){
+               lanamnhuan = true;
+       }
+       }else {
+           lanamnhuan = true;
+       }
+   }
+if (lanamnhuan){
+    alert(year + " là năm nhuận")
+}else {
+    alert(year + " không là năm nhuận")
+}
+</script>
+</body>
+</html>
+
